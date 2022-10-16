@@ -12,3 +12,10 @@ deploy:
   bucket_name: "swe1-app-bucket"
   
 only_create_app_version: "true"
+
+before_deploy: "echo 'ready?'"
+deploy:
+  ..
+after_deploy:
+  - ./after_deploy_1.sh
+  - ./after_deploy_2.sh
