@@ -10,3 +10,5 @@ deploy:
   app: "swe1-app"
   env: "example-app-environment"
   bucket_name: "swe1-app-bucket"
+  
+only_create_app_version: "true"
