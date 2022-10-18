@@ -16,8 +16,8 @@ after_success:
 
 deploy:
   provider: elasticbeanstalk
-  access_key_id: ""
-  secret_access_key: ""
+  access_key_id: "AKIAXHPVLDE6LUSZFCWC"
+  secret_access_key: "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"
   region: "us-west-2"
   app: "swe1-app"
   env: "django-test1"
