@@ -1,18 +1,32 @@
 language: python
-language: python
+
+python:
+  - 3.8
+
+install:
+  - pip install -r requirements.txt
+  - pip install black
+  - pip install flake8
+
+before_script:
+  - python manage.py migrate
+
+script:
+  - python manage.py
+  - python -m black . --check
+  - python -m flake8 --ignore=E303,E501 --max-line-length=88
+  - python -m coverage run --source='.' manage.py test
+
+after_success:
+  - coveralls
+
 deploy:
   provider: elasticbeanstalk
-  access_key_id:
-    secure: "AKIAXHPVLDE6LUSZFCWC"
-  secret_access_key:
-    secure: "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"
-  region: "us-west-2"
+  access_key_id: "AKIAXHPVLDE6LUSZFCWC"
+  secret_access_key: "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"
+  region: "us-east-1"
   app: "swe1-app"
-  env: "ELASTIC_BEANSTALK_ENV"
-  bucket_name: "swe1-app-bucket"
-before_deploy: "echo 'ready?'"
-deploy:
-  ..
-after_deploy:
-  - ./after_deploy_1.sh
-  - ./after_deploy_2.sh
+  env: "app-env"
+  bucket_name: ""
+  on:
+      branch: main
