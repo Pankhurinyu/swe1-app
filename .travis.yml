@@ -9,3 +9,9 @@ deploy:
   app: "swe1-app"
   env: "ELASTIC_BEANSTALK_ENV"
   bucket_name: "swe1-app-bucket"
+before_deploy: "echo 'ready?'"
+deploy:
+  ..
+after_deploy:
+  - ./after_deploy_1.sh
+  - ./after_deploy_2.sh
