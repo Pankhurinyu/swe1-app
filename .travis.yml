@@ -7,5 +7,5 @@ deploy:
     secure: "tkGsysVrEyDD6ChdMjTQXOSUQtdcm8HSQxb78S4p"
   region: "us-west-2"
   app: "swe1-app"
-  env: "example-app-environment"
+  env: "ELASTIC_BEANSTALK_ENV"
   bucket_name: "swe1-app-bucket"
