@@ -21,7 +21,7 @@ deploy:
   region: "us-west-2"
   app: "swe1-app"
   env: "django-test1"
-  bucket_name: ""
+  bucket_name: "elasticbeanstalk-us-west-2-497120123196"
   on:
       repo: Pankhurinyu/swe1-app/mysite
       branch: main
