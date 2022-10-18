@@ -1,17 +1,27 @@
 language: python
+
+python:
+  - 3.8
+
+install:
+  - pip install -r requirements.txt
+  
+script:
+  - black ./
+  - flake ./
+  - python manage.py test
+
+after_success:
+  - coveralls
+
 deploy:
   provider: elasticbeanstalk
-  access_key_id:
-    secure: "AKIAXHPVLDE6LUSZFCWC"
-  secret_access_key:
-    secure: "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"
+  access_key_id: ""
+  secret_access_key: ""
   region: "us-west-2"
   app: "swe1-app"
-  env: "ELASTIC_BEANSTALK_ENV"
-  bucket_name: "swe1-app-bucket"
-before_deploy: "echo 'ready?'"
-deploy:
-  ..
-after_deploy:
-  - ./after_deploy_1.sh
-  - ./after_deploy_2.sh
+  env: "django-test1"
+  bucket_name: ""
+  on:
+      repo: Pankhurinyu/swe1-app/mysite
+      branch: main
