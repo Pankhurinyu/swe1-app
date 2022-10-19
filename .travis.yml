@@ -20,17 +20,7 @@ script:
 after_success:
   coveralls
 
-deploy:
-  provider: elasticbeanstalk
-  access_key_id: ""
-  secret_access_key: ""
-  region: "us-west-2"
-  app: "swe1-app"
-  env: "django-test1"
-  bucket_name: "elasticbeanstalk-us-west-2-224329748898"
-  on:
-      repo: Pankhurinyu/swe1-app
-      branch: main
+
 
 
 
