@@ -12,7 +12,6 @@ before_script:
   - python manage.py migrate
 
 script:
-  - python manage.py
   - python -m black . --check
   - python -m flake8 --ignore=E303,E501 --max-line-length=88
   - python -m coverage run manage.py test 
