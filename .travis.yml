@@ -5,15 +5,17 @@ python:
 
 install:
   - pip install -r requirements.txt
+  - pip install black
+  - pip install flake8
   
-script:
-  - black ./
-  - flake ./
-  - coveralls ./
-  - python manage.py test
+before_script:
+  - python manage.py migrate
 
-after_success:
-  - coveralls
+script:
+  - python manage.py
+  - python -m black . --check
+  - python -m flake8 --ignore=E303,E501 --max-line-length=88
+  - python -m coverage run --source='.' manage.py test
 
 deploy:
   provider: elasticbeanstalk
@@ -26,3 +28,5 @@ deploy:
   on:
       repo: Pankhurinyu/swe1-app
       branch: main
+
+
