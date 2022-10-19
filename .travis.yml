@@ -14,7 +14,7 @@ before_script:
 script:
   - python manage.py
   - python -m black . --check
-  - python -m flake8 --ignore=E303,E501,E401 --max-line-length=88
+  - python -m flake8 --ignore=E303,E501 --max-line-length=88
   #- flake8 --extend-ignore E203,E501,E401
   - python -m coverage run --source='.' manage.py test
 
