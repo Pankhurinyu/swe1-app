@@ -20,6 +20,19 @@ script:
 after_success:
   coveralls
 
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: ""
+  secret_access_key: ""
+  region: ""
+  app: "swe1-app"
+  env: ""
+  bucket_name: ""
+  on:
+      repo: Pankhurinyu/swe1-app
+      branch: main
+
+
 
 
 
