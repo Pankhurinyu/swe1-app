@@ -17,4 +17,7 @@ script:
   - python -m flake8 --ignore=E303,E501 --max-line-length=88
   #- flake8 --extend-ignore E203,E501,E401
 
+after_success:
+  coveralls
+
 
