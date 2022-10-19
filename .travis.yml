@@ -17,16 +17,4 @@ script:
   - python -m flake8 --ignore=E303,E501 --max-line-length=88
   #- flake8 --extend-ignore E203,E501,E401
 
-deploy:
-  provider: elasticbeanstalk
-  access_key_id: "AKIAXHPVLDE6LUSZFCWC"
-  secret_access_key: "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"
-  region: "us-west-2"
-  app: "swe1-app"
-  env: "django-test1"
-  bucket_name: "elasticbeanstalk-us-west-2-497120123196"
-  on:
-      repo: Pankhurinyu/swe1-app
-      branch: main
-
 
