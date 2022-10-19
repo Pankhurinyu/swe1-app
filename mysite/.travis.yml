@@ -9,6 +9,7 @@ install:
 script:
   - black ./
   - flake ./
+  - coveralls ./
   - python manage.py test
 
 after_success:
