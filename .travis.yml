@@ -24,5 +24,5 @@ deploy:
   env: "django-test1"
   bucket_name: "elasticbeanstalk-us-west-2-497120123196"
   on:
-      repo: Pankhurinyu/swe1-app/mysite
+      repo: Pankhurinyu/swe1-app
       branch: main
