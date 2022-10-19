@@ -10,4 +10,3 @@ main:
 [![Coverage Status](https://coveralls.io/repos/github/Pankhurinyu/swe1-app/badge.svg)](https://coveralls.io/github/Pankhurinyu/swe1-app)
 
 
-![Coveralls branch](https://img.shields.io/coveralls/Pankhurinyu/swe1-app/develop.svg)
