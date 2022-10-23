@@ -1,6 +1,6 @@
 # swe1-app
 
-
+http://django-env.eba-n8saxeph.us-west-2.elasticbeanstalk.com
 
 
 
