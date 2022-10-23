@@ -20,7 +20,7 @@ script:
 after_success:
   coveralls
 
-deployment on AWS failed due to locking of the account by AWS 
+
 deploy:
   provider: elasticbeanstalk
   access_key_id: ""
