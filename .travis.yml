@@ -20,18 +20,18 @@ script:
 after_success:
   coveralls
 
-# deployment on AWS failed due to locking of the account by AWS 
-# deploy:
-#   provider: elasticbeanstalk
-#   access_key_id: "AKIAXHPVLDE6LUSZFCWC"
-#   secret_access_key: "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"
-#   region: "us-west-2"
-#   app: "swe1-app"
-#   env: "django-test1"
-#   bucket_name: "elasticbeanstalk-us-west-2-497120123196"
-#   on:
-#       repo: Pankhurinyu/swe1-app
-#       branch: main
+deployment on AWS failed due to locking of the account by AWS 
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: ""
+  secret_access_key: ""
+  region: "us-west-2"
+  app: "swe1-app"
+  env: "django-env"
+  bucket_name: "elasticbeanstalk-us-west-2-011029750786"
+  on:
+      repo: Pankhurinyu/swe1-app
+      branch: main
 
 
 
